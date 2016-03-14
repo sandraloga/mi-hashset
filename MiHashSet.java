@@ -7,8 +7,8 @@
  */
 public class MiHashSet
 {
-    // instance variables - replace the example below with your own
-    private int x;
+
+    private int[] numeros;
 
     /**
      * Constructor for objects of class MiHashSet
@@ -16,18 +16,38 @@ public class MiHashSet
     public MiHashSet()
     {
         // initialise instance variables
-        x = 0;
+        numeros = new int[0];
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     *  añade el elemento al conjunto si no estaba. Devuelve verdadero en caso de que el elemento no 
+     *  estuviera presente en el conjunto y falso en caso contrario.
      */
-    public int sampleMethod(int y)
+    public boolean add(int valor)
     {
-        // put your code here
-        return x + y;
+        boolean encontrado = false;
+        int index =0;
+        while ( !encontrado && index < numeros.length)
+        {
+            if (numeros[index] == valor)
+            {
+                encontrado= true;
+            }
+            else
+            {
+                numeros[index]=valor;
+            }
+
+            index++;
+        }
+        return encontrado;
+    }
+
+    /**
+     *  vacía el conjunto
+     */
+    public void clear()
+    {
+        numeros = new int[0];
     }
 }
