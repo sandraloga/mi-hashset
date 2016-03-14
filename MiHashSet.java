@@ -42,7 +42,6 @@ public class MiHashSet
         }
         return encontrado;
     }
-
     /**
      *  vacía el conjunto
      */
@@ -50,4 +49,6 @@ public class MiHashSet
     {
         numeros = new int[0];
     }
+
+     
 }
